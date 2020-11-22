@@ -41,6 +41,7 @@ const GlobalStyles = createGlobalStyle`
   }
   h4{
     font-weight:bold;
+    font-size:2rem;
   }
   span{
     font-weight:bold;
@@ -48,6 +49,11 @@ const GlobalStyles = createGlobalStyle`
   }
   a{
     font-size:1.1rem;
+    color:white;
+    text-decoration:none;
+  }
+  ul{
+    list-style:none;
   }
   p{
     padding:3rem 0;
