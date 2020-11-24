@@ -13,6 +13,24 @@ const OurWorkPage = () => {
     <StyledWork>
       <StyledMovie>
         <h2>The Athlete</h2>
+        <div className="line"></div>
+        <Link to="/work/the-athlete">
+          <img src={athlete} alt="athlete" />
+        </Link>
+      </StyledMovie>
+      <StyledMovie>
+        <h2>The Racer</h2>
+        <div className="line"></div>
+        <Link to="/work/the-racer">
+          <img src={theracer} alt="theracer" />
+        </Link>
+      </StyledMovie>
+      <StyledMovie>
+        <h2>Good Times</h2>
+        <div className="line"></div>
+        <Link to="/work/good-times">
+          <img src={goodtimes} alt="goodtimes" />
+        </Link>
       </StyledMovie>
     </StyledWork>
   )
@@ -20,10 +38,26 @@ const OurWorkPage = () => {
 
 const StyledWork = styled.div`
   min-height:98vh;
+  overflow:hidden;
+  padding: 5rem 10rem;
+  h2{
+    padding:1rem 0;
+  }
 `;
 
 const StyledMovie = styled.div`
-  padding-left:10rem
+  padding-bottom:10rem;
+  .line{
+    height: 0.5rem;
+    background: #ccc;
+    margin-bottom: 3rem
+  }
+  img{
+    width: 100%;
+    height: 70vh;
+    scale:-.8;
+    object-fit:cover;
+  }
 `;
 
 export default OurWorkPage

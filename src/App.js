@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom"
 import Nav from './components/Nav';
 import ContactUsPage from './pages/ContactUsPage';
 import OurWorkPage from './pages/OurWorkPage';
+import MovieDetailPage from './pages/MovieDetailPage';
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route exact path="/work">
           <OurWorkPage />
+        </Route>
+        <Route exact path="/work/:id">
+          <MovieDetailPage />
         </Route>
         <Route exact path="/">
           <AboutUsPage />
