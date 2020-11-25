@@ -1,5 +1,8 @@
+import React from 'react'
 import styled from "styled-components/macro"
 import { Link } from "react-router-dom"
+import { motion } from "framer-motion";
+import { pageAnimation } from "../Animations";
 
 // Images
 import athlete from '../img/athlete-small.png'
@@ -10,7 +13,13 @@ import goodtimes from '../img/goodtimes-small.png'
 
 const OurWorkPage = () => {
   return (
-    <StyledWork>
+    <StyledWork
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      style={{ backgroundColor: "#fff" }}
+    >
       <StyledMovie>
         <h2>The Athlete</h2>
         <div className="line"></div>
@@ -36,7 +45,7 @@ const OurWorkPage = () => {
   )
 }
 
-const StyledWork = styled.div`
+const StyledWork = styled(motion.div)`
   min-height:98vh;
   overflow:hidden;
   padding: 5rem 10rem;

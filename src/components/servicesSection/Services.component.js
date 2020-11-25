@@ -1,3 +1,4 @@
+import React from 'react'
 // Importing Icons
 import Clock from '../../img/clock.svg'
 import Diaphragm from '../../img/diaphragm.svg'

@@ -1,3 +1,4 @@
+import React from 'react'
 import { StyledFaq } from "./FAQ.styles"
 
 const FAQSection = () => {
