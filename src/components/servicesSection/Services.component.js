@@ -6,10 +6,20 @@ import Money from '../../img/money.svg'
 import Teamwork from '../../img/teamwork.svg'
 import Home2 from '../../img/home2.png'
 import { StyledServices, StyledDescription, StyledImage, StyledCards, StyledCard } from './Services.styles'
+import useScroll from "../useScroll"
+import { scrollReveal } from "../../Animations"
 
 const ServicesSection = () => {
+
+  const [element, controls] = useScroll()
+
   return (
-    <StyledServices className="services">
+    <StyledServices
+      variants={scrollReveal}
+      ref={element}
+      animate={controls}
+      initial="hidden"
+      className="services">
       <StyledDescription className="description">
         <h2>High <span>Quality</span> Services</h2>
         <StyledCards className="cards">

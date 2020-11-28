@@ -3,6 +3,8 @@ import styled from "styled-components/macro"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion";
 import { sliderContainer, fade, photoAnimation, pageAnimation, lineAnimation, slider } from "../Animations";
+import useScroll from "../components/useScroll"
+import { scrollReveal } from "../Animations"
 
 // Images
 import athlete from '../img/athlete-small.png'
@@ -12,6 +14,11 @@ import goodtimes from '../img/goodtimes-small.png'
 
 
 const OurWorkPage = () => {
+
+  const [element, controls] = useScroll()
+  const [element2, controls2] = useScroll()
+
+
   return (
     <StyledWork
       variants={pageAnimation}
@@ -41,16 +48,30 @@ const OurWorkPage = () => {
           </StyledHide>
         </Link>
       </StyledMovie>
-      <StyledMovie>
+      <StyledMovie
+        ref={element}
+        variants={scrollReveal}
+        animate={controls}
+        initial="hidden"
+      >
         <h2>The Racer</h2>
-        <div className="line"></div>
+        <motion.div
+          variants={lineAnimation}
+          className="line"></motion.div>
         <Link to="/work/the-racer">
           <img src={theracer} alt="theracer" />
         </Link>
       </StyledMovie>
-      <StyledMovie>
+      <StyledMovie
+        ref={element2}
+        variants={scrollReveal}
+        animate={controls2}
+        initial="hidden"
+      >
         <h2>Good Times</h2>
-        <div className="line"></div>
+        <motion.div
+          variants={lineAnimation}
+          className="line"></motion.div>
         <Link to="/work/good-times">
           <img src={goodtimes} alt="goodtimes" />
         </Link>
@@ -68,7 +89,7 @@ const StyledWork = styled(motion.div)`
   }
 `;
 
-const StyledMovie = styled.div`
+const StyledMovie = styled(motion.div)`
   padding-bottom:10rem;
   .line{
     height: 0.5rem;

@@ -8,7 +8,8 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   html{
-    font-size:10px; 
+    font-size:10px;
+    
   }
 
   body {

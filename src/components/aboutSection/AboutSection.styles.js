@@ -1,13 +1,15 @@
 import styled from "styled-components/macro"
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
-export const StyledAbout = styled.div`
+export const StyledAbout = styled(motion.div)`
   min-height:90vh;
   display:flex;
   align-items:center;
   justify-content:space-between;
   padding:5rem 10rem;
-  color:white
+  color:white;
+  overflow: hidden;
+  
 `;
 
 export const StyledDescription = styled.div`
@@ -16,6 +18,7 @@ export const StyledDescription = styled.div`
   h2{
     font-weight:lighter;
   }
+  
 `;
 
 export const StyledImage = styled(motion.div)`

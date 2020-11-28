@@ -2,7 +2,7 @@ import styled from "styled-components/macro";
 import { StyledAbout, StyledDescription as AboutStyledDescription, StyledHide, StyledImage as AboutStyledImage } from "../aboutSection/AboutSection.styles";
 
 export const StyledServices = styled(StyledAbout)`
-
+  
   h2{
     padding-bottom: 5rem;
   }
@@ -20,6 +20,7 @@ export const StyledImage = styled(AboutStyledImage)``;
 export const StyledCards = styled.div`
   display:flex;
   flex-wrap:wrap;
+
 `;
 
 export const StyledCard = styled.div`

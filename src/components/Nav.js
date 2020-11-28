@@ -31,6 +31,10 @@ const StyledNav = styled.nav`
   align-items:center;
   padding: 1rem 10rem;
   background-color:#282828;
+  position:sticky;
+  top:0;
+  z-index:452436;
+  
   ul{
     display:flex;
   }

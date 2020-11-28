@@ -13,6 +13,7 @@ const AboutUsPage = () => {
       initial="hidden"
       animate="show"
       exit="exit"
+      style={{overflow: 'hidden'}}
     >
       <AboutSection />
       <ServicesSection />
