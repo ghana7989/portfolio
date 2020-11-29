@@ -1,30 +1,37 @@
-import React from 'react'
-import GlobalStyles from './components/GlobalStyles';
-import AboutUsPage from './pages/AboutUsPage'
-import { Route, Switch, useLocation } from "react-router-dom"
+import React from 'react';
+//Global Style
+import GlobalStyle from './components/GlobalStyle';
+//Import Pages
+import AboutUs from './pages/AboutUs';
+import OurWork from './pages/OurWork';
+import ContactUs from './pages/ContactUs';
+import MovieDetail from './pages/MovieDetail';
 import Nav from './components/Nav';
-import ContactUsPage from './pages/ContactUsPage';
-import OurWorkPage from './pages/OurWorkPage';
-import MovieDetailPage from './pages/MovieDetailPage';
+//Router
+import { Route, Switch, useLocation } from 'react-router-dom';
+//Animation
 import { AnimatePresence } from 'framer-motion';
-import ScrollTop from "./components/ScrollTop"
-
 
 function App() {
-
-  const location = useLocation()
-
+  const location = useLocation();
   return (
-    <div>
-      <GlobalStyles />
-      <ScrollTop />
+    <div className="App">
+      <GlobalStyle />
       <Nav />
       <AnimatePresence exitBeforeEnter>
-        <Switch key={location.pathname} location={location}>
-          <Route exact path="/contact" component={ContactUsPage} />
-          <Route exact path="/work" component={OurWorkPage} />
-          <Route exact path="/work/:id" component={MovieDetailPage} />
-          <Route exact path="/" component={AboutUsPage} />
+        <Switch location={location} key={location.pathname}>
+          <Route path="/" exact>
+            <AboutUs />
+          </Route>
+          <Route path="/work" exact>
+            <OurWork />
+          </Route>
+          <Route path="/contact">
+            <ContactUs />
+          </Route>
+          <Route path="/work/:id">
+            <MovieDetail />
+          </Route>
         </Switch>
       </AnimatePresence>
     </div>

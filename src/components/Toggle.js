@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
-import { motion} from "framer-motion";
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
 
 const Toggle = ({ children, title }) => {
-
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
 
   return (
-    <motion.div layout className="question" onClick={() => setToggle(a => !a)}>
+    <StyledToggle layout onClick={() => setToggle(!toggle)}>
       <motion.h4 layout>{title}</motion.h4>
-      {toggle ? children : null}
+      {toggle ? children : ''}
       <div className="faq-line"></div>
-    </motion.div>
-  )
-}
+    </StyledToggle>
+  );
+};
 
-export default Toggle
+const StyledToggle = styled(motion.div)`
+  cursor: pointer;
+  h4 {
+    padding: 2rem 0rem;
+  }
+`;
+
+export default Toggle;
