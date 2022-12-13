@@ -19,9 +19,11 @@ const Hero: Component = () => {
 								Let's Talk
 							</button>
 						</a>
-						<button class='btn btn-primary btn-outline font-bold  text-lg '>
-							My Projects
-						</button>
+						<a href='#projects'>
+							<button class='btn btn-primary btn-outline font-bold  text-lg '>
+								My Projects
+							</button>
+						</a>
 					</div>
 				</div>
 			</div>

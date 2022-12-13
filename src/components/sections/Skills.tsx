@@ -4,10 +4,11 @@ import {
 	FaBrandsHtml5,
 	FaSolidScrewdriverWrench,
 } from 'solid-icons/fa';
-import SkillCard from './atoms/SkillCard';
+import SkillCard from '../atoms/SkillCard';
+
 const Skills: Component = () => {
 	return (
-		<section class='py-10 h-full'>
+		<section id='skills' class='py-16 h-full'>
 			<div class='container mx-auto px-2'>
 				<div class='flex flex-wrap justify-center text-center mb-10'>
 					<div class='w-full lg:w-6/12 px-4 '>

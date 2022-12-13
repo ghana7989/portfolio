@@ -1,10 +1,11 @@
 import type { Component } from 'solid-js';
-import AboutMe from './components/AboutMe';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
-import Navbar from './components/Navbar';
-import Skills from './components/Skills';
+import AboutMe from './components/sections/AboutMe';
+import Contact from './components/sections/Contact';
+import Footer from './components/sections/Footer';
+import Hero from './components/sections/Hero';
+import Navbar from './components/sections/Navbar';
+import Projects from './components/sections/Projects';
+import Skills from './components/sections/Skills';
 
 const App: Component = () => {
 	return (
@@ -13,6 +14,7 @@ const App: Component = () => {
 			<Hero />
 			<AboutMe />
 			<Skills />
+			<Projects />
 			<Contact />
 			<Footer />
 		</>

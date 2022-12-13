@@ -2,7 +2,7 @@ import type { Component } from 'solid-js';
 
 const AboutMe: Component = () => {
 	return (
-		<div class='hero min-h-max bg-base-300 py-32'>
+		<div class='hero min-h-max bg-base-300 py-32' id='about-me'>
 			<div class='hero-content flex-col lg:flex-row lg:gap-6'>
 				<img
 					src='https://www.raulwebdev.com/static/media/memoji.ce215bb0350b737669fb.png'
