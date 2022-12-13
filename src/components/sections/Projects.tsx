@@ -4,12 +4,29 @@ import ProjectCard from '../atoms/ProjectCard';
 const data = [
 	{
 		title: 'Shoot Code | Realtime Code Editor',
-		projectImage: 'static/images/shoot-code-project.png',
+		projectImage: '../../../static/images/shoot-code-project.png',
 		description:
 			'Shoot Code is a realtime code editor that allows users to create a room, invite other users, and code together, realtime room count with usernames. It is realtime as it uses websockets over http/s and is deployed on Render',
 		techUsed: ['React', 'Typescript', 'Node.js', 'Express', 'Socket.io'],
 		liveLink: 'https://shoo-code.onrender.com/',
 		githubLink: 'https://github.com/ghana7989/shoot-code',
+	},
+	{
+		title: 'Daisy Marketplace | NFT Marketplace',
+		projectImage: '../../../static/images/NFT_MARKET_PLACE.png',
+		description:
+			'Daisy Marketplace is an NFT Marketplace runs on Goerli Testnet, One can create and list NFTs, purchase them and maintain a collection, Authentication enabled and is deployed on Vercel',
+		techUsed: [
+			'Solidity',
+			'React',
+			'NextJS',
+			'Typescript',
+			'Ethers.js',
+			'Truffle',
+			'TailwindCSS',
+		],
+		liveLink: 'https://nft-marketplace-one-phi.vercel.app/nft/create',
+		githubLink: 'https://github.com/ghana7989/nft-marketplace',
 	},
 ];
 const Projects: Component = () => {
