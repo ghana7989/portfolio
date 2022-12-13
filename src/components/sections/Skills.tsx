@@ -3,6 +3,7 @@ import {
 	FaSolidCode,
 	FaBrandsHtml5,
 	FaSolidScrewdriverWrench,
+	FaSolidFileContract,
 } from 'solid-icons/fa';
 import SkillCard from '../atoms/SkillCard';
 
@@ -21,13 +22,14 @@ const Skills: Component = () => {
 						icon={FaBrandsHtml5}
 						skills={[
 							'HTML',
-							'CSS',
+							'CSS (Sass)',
 							'JavaScript',
 							'React',
+							'NextJS',
+							'React Native',
+							'TypeScript',
 							'Redux',
 							'TailwindCSS',
-							'Bootstrap',
-							'jQuery',
 							'OAuth',
 						]}
 					/>
@@ -36,31 +38,30 @@ const Skills: Component = () => {
 						icon={FaSolidCode}
 						skills={[
 							'Node.js',
-							'Express',
-							'PostgreSQL',
+							'Go (Gin)',
+							'Express / fastify',
+							'NestJS',
 							'MongoDB',
-							'Mongoose',
-							'Sequelize',
+							'Prisma',
 							'RESTful APIs',
 							'GraphQL',
 							'Apollo',
 							'Socket.io',
+							'Docker',
 						]}
 					/>
 					<SkillCard
-						title='Tools'
-						icon={FaSolidScrewdriverWrench}
+						icon={FaSolidFileContract}
+						title='Blockchain'
 						skills={[
-							'Git',
-							'GitHub',
-							'Heroku',
-							'Netlify',
-							'VS Code',
-							'Postman',
-							'Figma',
-							'Adobe XD',
-							'Adobe Photoshop',
-							'Adobe Illustrator',
+							'EVM',
+							'Solidity',
+							"NFT'S",
+							'Ethers.js',
+							'Truffle',
+							'Ganache',
+							'Metamask',
+							'Polygon',
 						]}
 					/>
 				</div>
